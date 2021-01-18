@@ -1,0 +1,894 @@
+
+
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
+
+#include <stdlib.h>
+#include<stdio.h>
+static int flag=1;
+static int flag5=1;
+static int flag1=1;
+static int flag2=1;
+static int flag3=1;
+static int flag4=1;
+static int flag6=1;
+static int flag7=1;
+static int flag8=1;
+static int flag9=1;
+static int flag10=1;
+float ballX = 0.0f;
+float ballY = 1.2f;
+float ballZ = -3.2f;
+float ballX1 = 0.0f;
+float ballY1 = 35.0f;
+float ballZ1 = -3.2f;
+float ballX2 = 0.7f;
+float ballY2 = 37.0f;
+float ballZ2 = -3.2f;
+float ballX3 = 2.0f;
+float ballY3 = 35.0f;
+float ballZ3 = -3.2f;
+float ballX4 = 4.5f;
+float ballY4 = 35.0f;
+float ballZ4 = -3.2f;
+float colR=3.0;
+float colG=1.5;
+float colB=1.0;
+float bgColR=0.0;
+float bgColG=0.0;
+float bgColB=0.0;
+float ballX5 = 40.0f;
+float ballY5 = 35.0f;
+float ballZ5 = -3.2f;
+float ballX6 = 42.0f;
+float ballY6 = 35.0f;
+float ballZ6 = -3.2f;
+float ballX7 = 42.0f;
+float ballY7 = 35.0f;
+float ballZ7 = -3.2f;
+float ballX8 = 41.0f;
+float ballY8 = 33.0f;
+float ballZ8 = -3.2f;
+float ballX9 = 43.0f;
+float ballY9 = 33.0f;
+float ballZ9 = -3.2f;
+float bx = 1.0f;
+float by = 25.0f;
+float bz = -3.;
+void drawsphere(void) {
+
+        glColor3f(colR,colG,colB);
+         glTranslatef(ballX,ballY,ballZ);
+        glutSolidSphere(3.0, 50000, 50000);
+
+}
+void drawclouds4(){
+    glColor3f(128,128,128);
+        glTranslatef(ballX5,ballY5,ballZ5);
+
+glutSolidSphere(3.0, 50000, 50000);
+
+}
+
+void birds(){
+glColor3f(255,255,255);
+//glTranslatef(bx,by,bz);
+glBegin(GL_LINES);
+glVertex2f(1.0,30.0);
+glVertex2f(3.0,28.0);
+glVertex2f(3.0,28.0);
+glVertex2f(5.0,30.0);
+glEnd();
+
+glBegin(GL_LINES);
+glVertex2f(7.0,30.0);
+glVertex2f(9.0,28.0);
+glVertex2f(9.0,28.0);
+glVertex2f(11.0,30.0);
+glEnd();
+}
+void drawclouds9(){
+        glColor3f(128,128,128);
+        glTranslatef(30.0,35.0,-3.2);
+glutSolidSphere(3.0, 50000, 50000);
+
+
+
+}
+void drawclouds10(){
+        glColor3f(128,128,128);
+        glTranslatef(32.0,37.0,-3.2);
+glutSolidSphere(3.0, 50000, 50000);
+
+}
+void drawclouds11(){
+        glColor3f(128,128,128);
+        glTranslatef(33.0,35.0,-3.2);
+glutSolidSphere(3.0, 50000, 50000);}
+void drawclouds5(){
+        glColor3f(128,128,128);
+        glTranslatef(ballX6,ballY6,ballZ6);
+glutSolidSphere(3.0, 50000, 50000);
+
+
+
+}
+void drawclouds6(){
+        glColor3f(128,128,128);
+        glTranslatef(ballX7,ballY7,ballZ7);
+glutSolidSphere(3.0, 50000, 50000);
+
+}
+void drawclouds7(){
+        glColor3f(128,128,128);
+        glTranslatef(ballX8,ballY8,ballZ8);
+glutSolidSphere(3.0, 50000, 50000);
+
+}
+void drawclouds8(){
+        glColor3f(128,128,128);
+        glTranslatef(ballX9,ballY9,ballZ9);
+glutSolidSphere(3.0, 50000, 50000);
+
+}
+void drawclouds(){
+    glColor3f(128,128,128);
+        glTranslatef(ballX1,ballY1,ballZ1);
+
+glutSolidSphere(3.0, 50000, 50000);
+
+
+}
+void drawclouds1(){
+        glColor3f(128,128,128);
+        glTranslatef(ballX2,ballY2,ballZ2);
+glutSolidSphere(3.0, 50000, 50000);
+
+}
+void drawclouds2(){
+        glColor3f(128,128,128);
+        glTranslatef(ballX3,ballY3,ballZ3);
+glutSolidSphere(3.0, 50000, 50000);
+
+}
+void drawclouds3(){
+        glColor3f(128,128,128);
+        glTranslatef(ballX4,ballY4,ballZ4);
+glutSolidSphere(3.0, 50000, 50000);
+
+}
+void drawsk(){
+ glBegin(GL_POLYGON);
+
+
+   glColor3ub(165,42,42);
+  glVertex3f(0.0, 0.0, 0.0);
+  glVertex3f(6.0, 20.0, 0.0);
+  glVertex3f(12.0, 0.0, 0.0);
+
+glEnd();
+ glBegin(GL_POLYGON);
+
+
+   glColor3ub(165,42,42);
+  glVertex3f(12.0, 0.0, 0.0);
+  glVertex3f(18.0, 20.0, 0.0);
+  glVertex3f(24.0, 0.0, 0.0);
+
+glEnd();
+ glBegin(GL_POLYGON);
+
+
+   glColor3ub(165,42,42);
+  glVertex3f(24.0, 0.0, 0.0);
+  glVertex3f(30.0, 20.0, 0.0);
+  glVertex3f(36.0, 0.0, 0.0);
+
+glEnd();
+ glBegin(GL_POLYGON);
+
+
+   glColor3ub(165,42,42);
+  glVertex3f(36.0, 0.0, 0.0);
+  glVertex3f(42.0, 20.0, 0.0);
+  glVertex3f(50.0, 0.0, 0.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(2.0, 4.5, 1.0);
+  glVertex3f(4.0, 6.0, 1.0);
+  glVertex3f(6.0, 4.5, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(1.0, 2.0, 1.0);
+  glVertex3f(4.0, 6.0, 1.0);
+  glVertex3f(7.0, 2.0, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+glColor3ub(255,255,255);
+glVertex3f(3.5,0.0,1.0);
+glVertex3f(3.5,2.0,1.0);
+glVertex3f(4.5,2.0,1.0);
+glVertex3f(4.5,0.0,1.0);
+glEnd();
+
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(10.0, 4.5, 1.0);
+  glVertex3f(12.0, 6.0, 1.0);
+  glVertex3f(14.0, 4.5, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+
+   glColor3ub(124,252,0);
+  glVertex3f(9.0, 2.0, 1.0);
+  glVertex3f(12.0, 6.0, 1.0);
+  glVertex3f(15, 2.0, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+glColor3ub(255,255,255);
+glVertex3f(11.5,0.0,1.0);
+glVertex3f(11.5,2.0,1.0);
+glVertex3f(12.5,2.0,1.0);
+glVertex3f(12.5,0.0,1.0);
+glEnd();
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(18.0, 4.5, 1.0);
+  glVertex3f(20.0, 6.0, 1.0);
+  glVertex3f(22.0, 4.5, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(17.0, 2.0, 1.0);
+  glVertex3f(20.0, 6.0, 1.0);
+  glVertex3f(23.0, 2.0, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+glColor3ub(255,255,255);
+glVertex3f(19.5,0.0,1.0);
+glVertex3f(19.5,2.0,1.0);
+glVertex3f(20.5,2.0,1.0);
+glVertex3f(20.5,0.0,1.0);
+glEnd();
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(26.0, 4.5, 1.0);
+  glVertex3f(28.0, 6.0, 1.0);
+  glVertex3f(30.0, 4.5, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(25.0, 2.0, 1.0);
+  glVertex3f(28.0, 6.0, 1.0);
+  glVertex3f(31.0, 2.0, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+glColor3ub(255,255,255);
+glVertex3f(27.5,0.0,1.0);
+glVertex3f(27.5,2.0,1.0);
+glVertex3f(28.5,2.0,1.0);
+glVertex3f(28.5,0.0,1.0);
+glEnd();
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(34.0, 4.5, 1.0);
+  glVertex3f(36.0, 6.0, 1.0);
+  glVertex3f(38.0, 4.5, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(33.0, 2.0, 1.0);
+  glVertex3f(36.0, 6.0, 1.0);
+  glVertex3f(39, 2.0, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+glColor3ub(255,255,255);
+glVertex3f(35.5,0.0,1.0);
+glVertex3f(35.5,2.0,1.0);
+glVertex3f(36.5,2.0,1.0);
+glVertex3f(36.5,0.0,1.0);
+glEnd();
+
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(42.0, 4.5, 1.0);
+  glVertex3f(44.0, 6.0, 1.0);
+  glVertex3f(46.0, 4.5, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+
+
+   glColor3ub(124,252,0);
+  glVertex3f(41.0, 2.0, 1.0);
+  glVertex3f(44.0, 6.0, 1.0);
+  glVertex3f(47, 2.0, 1.0);
+
+glEnd();
+glBegin(GL_POLYGON);
+glColor3ub(255,255,255);
+glVertex3f(43.5,0.0,1.0);
+glVertex3f(43.5,2.0,1.0);
+glVertex3f(44.5,2.0,1.0);
+glVertex3f(44.5,0.0,1.0);
+glEnd();
+}
+void initRendering() {
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_COLOR_MATERIAL);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_LIGHT1);
+    glEnable(GL_NORMALIZE);
+
+}
+
+
+void display(void)
+{
+ glClear( GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
+
+
+  glClearColor(bgColR,bgColG,bgColB,0.0);
+    glMatrixMode(GL_MODELVIEW);
+
+    glLoadIdentity();
+
+
+
+
+
+    GLfloat lightColor0[] = {1.9f, 1.5f, 1.5f, 1.0f};
+
+
+   GLfloat lightColor1[] = {0.5f, 0.2f, 0.2f, 1.0f};
+
+
+
+
+ glPushMatrix();
+drawsphere();
+glPopMatrix();
+
+ glPushMatrix();
+drawsk();
+glPopMatrix();
+
+ glPushMatrix();
+drawclouds();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds1();
+glPopMatrix();
+
+
+glPushMatrix();
+drawclouds2();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds3();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds4();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds5();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds6();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds7();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds8();
+glPopMatrix();
+
+
+glPushMatrix();
+birds();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds9();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds10();
+glPopMatrix();
+
+glPushMatrix();
+drawclouds11();
+glPopMatrix();
+
+ glFlush();
+ glutSwapBuffers();
+}
+
+void update(int value) {
+
+    if(ballX >50.0f)
+    {
+        ballX = 0.0f;
+        ballY = 1.0f;
+        flag=1;
+        colR=2.0;
+        colG=1.50;
+        colB=1.0;
+
+        bgColB=0.0;
+    }
+
+    if(flag)
+    {
+    ballX += 0.1f;
+    ballY +=0.1f;
+    colR-=0.01;
+
+    colB+=0.05;
+
+    bgColB+=0.003;
+
+       if(ballX>25.0)
+       {
+           flag=0;
+
+       }
+    }
+    if (!flag)
+    {
+        ballX += 0.1f;
+        ballY -=0.1f;
+        colR+=0.01;
+        colB-=0.1;
+
+        bgColB-=0.003;
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update, 0);
+}
+void update1(int value) {
+
+    if(ballX >50.0f)
+    {
+        ballX1 = 0.0f;
+        ballY1 = 35.0f;
+        flag1=1;
+
+    }
+
+    if(flag1)
+    {
+    ballX1 += 0.1f;
+
+
+
+       if(ballX1>25.0)
+       {
+           flag1=0;
+
+       }
+    }
+    if (!flag1)
+    {
+        ballX1 += 0.1f;
+
+
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update1, 0);
+}
+void update2(int value) {
+
+    if(ballX2 >50.7f)
+    {
+        ballX2 = 0.7f;
+        ballY2 = 37.0f;
+        flag2=1;
+
+    }
+
+    if(flag2)
+    {
+    ballX2 += 0.1f;
+
+
+
+       if(ballX2>25.0)
+       {
+           flag2=0;
+
+       }
+    }
+    if (!flag2)
+    {
+        ballX2 += 0.1f;
+
+
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update2, 0);
+}
+void update3(int value) {
+
+    if(ballX3 >52.0f)
+    {
+        ballX3 = 2.0f;
+        ballY3 = 35.0f;
+        flag3=1;
+
+    }
+
+    if(flag3)
+    {
+    ballX3 += 0.1f;
+
+
+
+       if(ballX3>25.0)
+       {
+           flag3=0;
+
+       }
+    }
+    if (!flag3)
+    {
+        ballX3 += 0.1f;
+
+
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update3, 0);
+}
+void update4(int value) {
+
+    if(ballX4 >54.5f)
+    {
+        ballX4 = 4.5f;
+        ballY4 = 35.0f;
+        flag4=1;
+
+    }
+
+    if(flag4)
+    {
+    ballX4 += 0.1f;
+
+
+
+       if(ballX4>25.0)
+       {
+           flag4=0;
+
+       }
+    }
+    if (!flag4)
+    {
+        ballX4 += 0.1f;
+
+
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update4, 0);
+}void update5(int value) {
+
+    if(ballX5 >50.0f)
+    {
+        ballX5 = 40.0f;
+        ballY5 = 30.0f;
+        flag1=1;
+
+    }
+
+    if(flag5)
+    {
+    ballX5 -= 0.1f;
+
+
+
+       if(ballX5>25.0)
+       {
+           flag1=0;
+
+       }
+    }
+    if (!flag5)
+    {
+        ballX5 -= 0.1f;
+
+        ballY5 -=0.1f;
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update5, 0);
+}
+
+void update6(int value) {
+
+    if(ballX6 >50.7f)
+    {
+        ballX6 = 42.0f;
+        ballY6 = 35.0f;
+        flag2=1;
+
+    }
+
+    if(flag6)
+    {
+    ballX6 -= 0.1f;
+
+
+
+       if(ballX6>25.0)
+       {
+           flag6=0;
+
+       }
+    }
+    if (!flag6)
+    {
+        ballX6 -= 0.1f;
+
+
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update6, 0);
+}
+void update7(int value) {
+
+    if(ballX7 >52.0f)
+    {
+        ballX7 = 42.0f;
+        ballY7 = 35.0f;
+        flag7=1;
+
+    }
+
+    if(flag7)
+    {
+    ballX7 -= 0.1f;
+
+
+
+       if(ballX7>25.0)
+       {
+           flag7=0;
+
+       }
+    }
+    if (!flag7)
+    {
+        ballX7-= 0.1f;
+
+
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update7, 0);
+}
+void update8(int value) {
+
+    if(ballX8 >54.5f)
+    {
+        ballX8 = 41.0f;
+        ballY8= 33.0f;
+        flag8=1;
+
+    }
+
+    if(flag8)
+    {
+    ballX8 -= 0.1f;
+
+
+
+       if(ballX8>25.0)
+       {
+           flag8=0;
+
+       }
+    }
+    if (!flag8)
+    {
+        ballX8 -= 0.1f;
+
+
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update8, 0);
+}void update9(int value) {
+
+    if(ballX9 >54.5f)
+    {
+        ballX9 = 43.0f;
+        ballY9= 33.0f;
+        flag9=1;
+
+    }
+
+    if(flag9)
+    {
+    ballX9 -= 0.1f;
+
+
+
+       if(ballX9>25.0)
+       {
+           flag9=0;
+
+       }
+    }
+    if (!flag9)
+    {
+        ballX9 -= 0.1f;
+
+
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update9, 0);
+}
+void update10(int value) {
+
+    if(bx >54.5f)
+    {
+        bx = 1.0f;
+        by= 33.0f;
+        flag10=1;
+
+    }
+
+    if(flag10)
+    {
+    bx += 0.1f;
+
+
+
+       if(bx>25.0)
+       {
+           flag10=0;
+
+       }
+    }
+    if (!flag10)
+    {
+        bx += 0.1f;
+
+
+
+
+    }
+
+    glutPostRedisplay();
+
+
+    glutTimerFunc(40, update10, 0);
+}
+
+void handleKeypress(unsigned char key,int x,int y){
+switch(key){
+      case 'q':update(flag1);
+                update1(flag1);update2(flag2);update3(flag3);update4(flag4),update5(flag5),update6(flag6),update7(flag7),update8(flag8),update9(flag9),update10(flag10);
+
+}
+}
+int main(int argc, char **argv)
+{
+ printf("hello world\n");
+ glutInit(&argc, argv);
+ glutInitDisplayMode ( GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+
+glutInitWindowSize(600,600);
+ glutCreateWindow ("CG");
+
+
+ glClearColor(0.0, 0.0, 0.0, 0.0);
+ glMatrixMode(GL_PROJECTION);
+ glLoadIdentity();
+ glOrtho(0.0, 50.0, 0.0, 50.0, -1.0, 1.0);
+  initRendering();
+glutKeyboardFunc(handleKeypress);
+ glutDisplayFunc(display);
+
+
+ //glutFullScreen();
+
+ // glutTimerFunc(25, update, 0);
+ // glutTimerFunc(25, update1, 0);
+  //glutTimerFunc(25, update2, 0);
+  //glutTimerFunc(25, update3, 0);
+//glutTimerFunc(25, update4, 0);
+ glutMainLoop();
+
+ return 0;
+}

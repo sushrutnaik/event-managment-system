@@ -1,0 +1,54 @@
+
+    <html>
+    <head>
+        <title>Register</title>
+                <link rel="stylesheet" type="text/css" href="register.css">
+        <script>
+        function checkpassword(){
+            var p=f.password.value;
+            var cp=f.confirmpass.value;
+            
+            if(p==cp)
+                alert("password and Confirm password are similar")
+            else
+                alert("Mismatch")
+            }
+        </script>
+        <body>
+		
+            <form method="post" action="server.php">
+            
+            <div class="regbox">
+                <h1>Register here</h1>
+                <form name="f" action="login.html" method='post'>
+                <p>UID</p>
+                    <input type="text" name="uid" placeholder="UID">
+                <p>Username</p>
+                    <input type="text" name="username" placeholder="Name">
+                <p>Password</p>
+                    <input type="password" name="password" placeholder="Password">
+                <p>Confirm Password</p>
+                    <input type="password" name="confirmpass" placeholder="Confirm password">
+                    <p>Dance</p>
+                    <input type="checkbox" name="event[]" value="Dance">
+                    <p>music</p>
+                    <input type="checkbox" name="event[]" value="music">
+                    <p>photography</p>
+                    <input type="checkbox" name="event[]" value="photography">
+                    <p>drama</p>
+                    <input type="checkbox" name="event[]" value="drama">
+                    <p>Fine art</p>
+                    <input type="checkbox" name="event[]" value="DJ">
+                    <p>Treasure Hunt</p>
+                    <input type="checkbox" name="event[]" value="Treasure">
+                <p></p>
+                    <input type="submit" name="submit" value="Submit" onclick=checkpassword()>
+                   <p></p> 
+                Already a member?<a href="clogin.html">Sign in</a>
+                </form>
+         
+            </div>
+        </body>
+
+    </head>
+</html>
